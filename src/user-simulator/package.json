@@ -20,7 +20,7 @@
     "dependencies": {
         "@flood/element": "^2.0.4",
         "@flood/element-cli": "^2.0.4",
-        "prettier": "^2.8.3"
+        "prettier": "^2.8.8"
     },
     "devDependencies": {
         "@types/node": "18.11.18"
