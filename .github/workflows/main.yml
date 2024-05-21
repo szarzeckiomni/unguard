@@ -16,7 +16,7 @@ jobs:
       continue-on-error: true
       with:
           image:  my-image-name-2:test
-          args: --file=./src/ad-service/Dockerfile --severity-threshold=high --org=8476344b-cc8f-4138-b6fe-e1936da55e0c --project-tags=stage=dev
+          args: --file=src/ad-service/Dockerfile --severity-threshold=high --project-name=customName --org=8476344b-cc8f-4138-b6fe-e1936da55e0c --project-tags=stage=dev
           command: monitor
       env:
         SNYK_TOKEN: ${{ secrets.SNYK }}
