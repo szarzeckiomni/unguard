@@ -1,4 +1,4 @@
-name: ci
+name: unguard-ad-service
 
 on:
  workflow_dispatch:
