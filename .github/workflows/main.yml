@@ -17,6 +17,7 @@ jobs:
       with:
           image:  my-image-name:test
           args: --file=./src/ad-service/Dockerfile --severity-threshold=high --sarif-file-output=snyk.sarif
+          command: monitor
       env:
         SNYK_TOKEN: ${{ secrets.SNYK }}
 
