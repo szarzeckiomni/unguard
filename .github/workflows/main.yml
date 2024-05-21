@@ -16,12 +16,12 @@ jobs:
       continue-on-error: true
       with:
           image:  my-image-name:test
-          args: --file=./src/ad-service/Dockerfile --severity-threshold=high --sarif-file-output=snyk.sarif
+          args: --file=./src/ad-service/Dockerfile --severity-threshold=high 
           command: monitor
       env:
         SNYK_TOKEN: ${{ secrets.SNYK }}
-
-    - name: Upload Snyk report as sarif 📦
-      uses: github/codeql-action/upload-sarif@v2
-      with:
-         sarif_file: snyk.sarif
+#--sarif-file-output=snyk.sarif
+#    - name: Upload Snyk report as sarif 📦
+#      uses: github/codeql-action/upload-sarif@v2
+#      with:
+#         sarif_file: snyk.sarif
