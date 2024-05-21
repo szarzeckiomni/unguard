@@ -16,7 +16,7 @@ jobs:
       continue-on-error: true
       with:
           image:  my-image-name:test
-          args: --file=Dockerfile --severity-threshold=high --sarif-file-output=snyk.sarif
+          args: --file=./src/ad-service/Dockerfile --severity-threshold=high --sarif-file-output=snyk.sarif
       env:
         SNYK_TOKEN: ${{ secrets.SNYK }}
 
