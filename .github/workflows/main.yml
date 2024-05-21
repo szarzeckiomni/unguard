@@ -9,4 +9,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file src/ad-service/Dockerfile --tag my-image-name:$(date +%s)
+      working-directory: ./src/ad-service
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
