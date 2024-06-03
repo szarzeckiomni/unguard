@@ -15,7 +15,7 @@ jobs:
       uses: snyk/actions/docker@master
       continue-on-error: true
       with:
-          image:  ghcr.io/dynatrace-oss/unguard/unguard-ad-service:0.9.1
+          image:  ghcr.io/dynatrace-oss/unguard/unguard-ad-service:0.9.2
           args: --file=src/ad-service/Dockerfile --severity-threshold=high --target-name==customName --org=8476344b-cc8f-4138-b6fe-e1936da55e0c --project-tags=component=pkg:github/szarzeckiomni/unguard/ad-service@main
           command: monitor
       env:
