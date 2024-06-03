@@ -10,12 +10,12 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       working-directory: ./src/proxy-service
-      run: docker build . --file Dockerfile --tag  ghcr.io/dynatrace-oss/unguard/unguard-proxy-service:0.9.1
+      run: docker build . --file Dockerfile --tag  ghcr.io/dynatrace-oss/unguard/unguard-proxy-service:0.9.2
     - name: Scan Docker image 🐳
       uses: snyk/actions/docker@master
       continue-on-error: true
       with:
-          image:  ghcr.io/dynatrace-oss/unguard/unguard-proxy-service:0.9.1
+          image:  ghcr.io/dynatrace-oss/unguard/unguard-proxy-service:0.9.2
           args: --file=src/ad-service/Dockerfile  --target-name==customName --org=8476344b-cc8f-4138-b6fe-e1936da55e0c --project-tags=component=pkg:github/szarzeckiomni/unguard/unguard-proxy-service@main
           command: monitor
       env:
