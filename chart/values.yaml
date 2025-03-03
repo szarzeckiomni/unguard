@@ -27,7 +27,7 @@ ingress:
 
 # Tracing
 tracing:
-  enabled: false
+  enabled: true
 
 # Jaeger
 jaeger:
